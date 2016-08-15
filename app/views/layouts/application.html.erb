@@ -10,6 +10,9 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
 <%= render 'layouts/header' %>
 </header>
+<% flash.each do |key, message| %>
+<div><%= message %></div>
+<% end %>
 <div class="container">
 <%= yield %>
 <%= render 'layouts/footer' %>
