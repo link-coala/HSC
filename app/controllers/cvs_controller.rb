@@ -1,5 +1,6 @@
 class CvsController < ApplicationController
 def index
+@cvs = Cv.all
 end
 def new
 @cv = Cv.new

@@ -1,0 +1,17 @@
+<h1>Todos los empleados</h1>
+ <table>
+  <tr>
+    <th>Foto</th>
+    <th>Nombre</th>
+    <th>Apellido</th>
+    <th>Cargo</th>
+  </tr>
+  <% @cvs.each do |cv| %>
+    <tr>
+      <td><%= cv.picture %></td>
+      <td><%= cv.name %></td>
+      <td><%= cv.lastname %></td>
+      <td><%= cv.job %></td>
+    </tr>
+  <% end %>
+</table>
