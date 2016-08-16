@@ -1,0 +1,38 @@
+<%= form_for @cv, :html => {:multipart => true} do |f| %>
+  <% if @cv.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@cv.errors.count, "error") %> prohibited this cv from being saved:</h2>
+
+      <ul>
+      <% @cv.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+    <div class="field">
+    <%= f.label :picture %><br>
+    <%= f.file_field :picture %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :lastname %><br>
+    <%= f.text_field :lastname %>
+  </div>
+  <div class="field">
+    <%= f.label :genere %><br>
+    <%= f.text_field :genere %>
+  </div>  
+  <div class="field">
+    <%= f.label :job %><br>
+    <%= f.select :job, ['Bodega', 'ventas', 'secretariado' ]%>
+  </div>
+  <div class="actions">
+    <br>
+    <%= f.submit %>
+  </div>
+<% end %>
+  <br>

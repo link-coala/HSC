@@ -12,6 +12,9 @@
       <td><%= cv.name %></td>
       <td><%= cv.lastname %></td>
       <td><%= cv.job %></td>
+        <td><%= link_to 'Show', cv %></td>
+        <td><%= link_to 'Edit', edit_cv_path(cv) %></td>
+        <td><%= button_to 'Destroy', cv, method: :delete, data: { confirm: 'Are you sure?' } %></td>
     </tr>
   <% end %>
 </table>
