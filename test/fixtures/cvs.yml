@@ -4,12 +4,10 @@ one:
   picture: MyString
   name: MyString
   lastname: MyString
-  genere: MyString
   job: MyString
 
 two:
   picture: MyString
   name: MyString
   lastname: MyString
-  genere: MyString
   job: MyString
