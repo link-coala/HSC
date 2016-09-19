@@ -1,28 +1,44 @@
-<header class="header">
-<h3 class="title">HSC</h3>
-</header>
-<ul>
+
+
+<ul class = "navbar" id="nav">
+   <li><p>HSC</p></li>
    <li><%= link_to "Caracteristicas", caracteristicas_path %></li>
    <li><%= link_to "Creditos", creditos_path %></li>
    <li><%= link_to "Cv", new_cv_path %></li>
    <li><%= link_to "Cvs", cvs_path %></li> 
-   <p class="navbar-text pull-right">
+  
 <% if user_signed_in? %>
   Logged in as <strong><%= current_user.email %></strong>.
-  <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
+  <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> 
   <%= button_to('Logout', destroy_user_session_path, :method => :delete) %>
 <% else %>
-  <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
-  <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+  <li><%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %></li> 
+  <li><%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %></li>
 <% end %> 
-
 </ul>
+
+
+<link href="https://fonts.googleapis.com/css?family=Black+Ops+One" rel="stylesheet"> 
+
+
 <style>
+body {background: #97D7FF;
+font-family: "Arial";
+margin: 0 0 0 0;} 
 footer {
-margin-top: 45px;
-padding-top: 5px;
-border-top: 1px solid #eaeaea;
-color: #777;
+    margin-top: 45px;
+    padding-top: 5px;
+    border-top: 1px solid #eaeaea;
+    background-color: black;
+    background-color: snow;
+    font-size: 14px;
+    height: 92px;
+}
+p {
+font-family: 'Black Ops One', cursive;
+font-size:  50px;
+margin-left: 10px;
+color:  white;
 }
 ul {
     list-style-type: none;
@@ -50,5 +66,20 @@ li a:hover {
 .title {
 	text-align: center;
 	font-size: 30px;
+}
+#nav {
+    height: 110px;
+    background: -webkit-linear-gradient(left, rgba(255,0,0,0), rgba(255,0,0,1)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, rgba(255,0,0,0), rgba(255,0,0,1)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, rgba(255,0,0,0), rgba(255,0,0,1)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1)); /* Standard syntax (must be last) */
+} 
+.container {
+    text-align: center;
+    font-size: 19px;
+    margin-top: 99px;
+    margin-left: 5px;
+    margin-left: 21px;
+    margin-bottom: 163px;
 }
 </style>
